@@ -14,7 +14,7 @@ export default class Cart {
     getTotalPrice(): number {
         return this._items.reduce((sum, item) => sum + item.price, 0);
     }
-
+    
     getDiscountedPrice(discount: number): number {
         const total = this.getTotalPrice();
         return total - (total * discount / 100);
